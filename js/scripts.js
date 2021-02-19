@@ -29,19 +29,7 @@
             }
         }
     });
-    document.querySelector("form").addEventListener("submit", handleSubmit);
 
-    const handleSubmit = (e) => {
-      e.preventDefault()
-      let myForm = document.getElementById('sentMessage');
-      let formData = new FormData(myForm)
-      fetch('/', {
-        method: 'POST',
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
-      }).then(() => console.log('Form successfully submitted')).catch((error) =>
-        alert(error))
-    }
     // Closes responsive menu when a scroll trigger link is clicked
     $(".js-scroll-trigger").click(function () {
         $(".navbar-collapse").collapse("hide");
